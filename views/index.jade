@@ -1,0 +1,16 @@
+doctype html
+html
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/amcharts/2.11.3/amcharts.js")
+  link(rel='stylesheet' href='/stylesheets/style.css')
+  head
+    title= title
+  body
+    h1= title
+    p Welcome to #{title} 
+
+    each item in results
+      li= item.track_name
+
+
+    

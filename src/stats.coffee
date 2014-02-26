@@ -1,11 +1,12 @@
+file_location = './db/measuredincm.db'
+
 fs = require('fs')
 sqlite3 = require('sqlite3').verbose()
 db = new sqlite3.Database(file_location)
 
-file_location = './measuredincm.db'
 
 
-lookup = -> 
+lookup = (callback) ->
   fs.exists file_location, (exists) -> 
     console.log 'this file exists.' if exists
   
@@ -17,7 +18,7 @@ lookup = ->
   # and really, what I want to do is get 'rows' into my webpage
   results = db.all stmt, (err, rows) ->
     console.log rows
-    return rows
+    callback rows
 
 
 

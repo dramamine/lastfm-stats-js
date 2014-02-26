@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/amcharts/2.11.3/amcharts.js"></script>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <ul>
+    <% for(var i=0; i<data.length; i++) {%>
+       <li><%= data[i].toString() %></li>
+    <% } %>
+    </ul>
+
+    <p><% data.artist_name %></p>
+
+  </body>
+</html>

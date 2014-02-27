@@ -2,7 +2,19 @@ express = require 'express'
 require 'coffee-script'
 require 'jade'
 stats = require './stats'
+path = require 'path'
+
 app = express()
+
+#app.configure ->
+  #app.use '/public', express.static (__dirname + '/public')
+ 
+
+# app.use express.static (__dirname + '/public')
+# app.use express.static (__dirname + '/views/public')
+# app.use express.static '/public', (__dirname + '/views/public')
+app.use express.static path.join __dirname, '../public'
+
 
 app.set 'view engine', 'jade'
 

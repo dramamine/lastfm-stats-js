@@ -17,7 +17,7 @@ lookup = (callback) ->
   # which is a db object
   # and really, what I want to do is get 'rows' into my webpage
   results = db.all stmt, (err, rows) ->
-    console.log rows
+    # console.log rows
     callback rows
 
 

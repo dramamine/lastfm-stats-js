@@ -45,7 +45,10 @@ app.get '/', (req, res) ->
 app.get '/top_artists/:year', (req, res) ->
   
   # use this for testing
-  stats.get_sample_data (data) ->
+  # stats.get_sample_data (data) ->
+  #   res.json data
+  
+  stats.get_top_artists req.params.year, (data) ->
     res.json data
 
 

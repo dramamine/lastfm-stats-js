@@ -24,6 +24,23 @@ lookup = (callback) ->
 
 exports.lookup = lookup
 
+get_top_artists = (year, callback) ->
+  stmt = "
+    SELECT artist_name, count(*) as plays
+    FROM track_history
+    WHERE substr(playtime, 1, 4) = '#{year}'
+    GROUP BY artist_name
+    ORDER BY count(*) DESC
+    LIMIT 10
+    "
+
+  results = db.all stmt, (err, rows) ->
+  # console.log rows
+    callback rows
+
+exports.get_top_artists = get_top_artists
+
+
 ###
 Returns some sample data to the callback.
 ###

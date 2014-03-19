@@ -23,3 +23,51 @@ lookup = (callback) ->
 
 
 exports.lookup = lookup
+
+###
+Returns some sample data to the callback.
+###
+get_sample_data = (callback) ->
+  sample_data = [{
+      "artist": "Metallica", "plays": "500"
+    }, 
+    {
+      "artist": "Altar of Plagues", "plays": "450"
+    }, 
+    {
+      "artist": "Band 1", "plays": "400"
+    }, 
+    {
+      "artist": "Band 2", "plays": "300"
+    }, 
+    {
+      "artist": "Band 3", "plays": "200"
+    }, 
+    {
+      "artist": "Band 4", "plays": "100"
+    }, 
+    {
+      "artist": "Band 5", "plays": "80"
+    }, 
+    {
+      "artist": "Band 6", "plays": "50"
+    }, 
+    {
+      "artist": "Band 7", "plays": "20"
+    }, 
+    {
+      "artist": "Band 8", "plays": "10"
+    }]
+
+  callback sample_data
+
+exports.get_sample_data = get_sample_data
+
+
+
+
+
+
+
+
+

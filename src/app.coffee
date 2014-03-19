@@ -18,6 +18,8 @@ app.use express.static path.join __dirname, '../public'
 
 app.set 'view engine', 'jade'
 
+app.locals.pretty = true
+
 app.get '/', (req, res) ->
   
   # doesn't work properly yet
@@ -40,6 +42,14 @@ app.get '/', (req, res) ->
     #     title: 'Marten\'s Page'
     #     results: results
     
+app.get '/top_artists/:year', (req, res) ->
+  
+  # use this for testing
+  stats.get_sample_data (data) ->
+    res.json data
+
+
+
 
 
 

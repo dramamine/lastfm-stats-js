@@ -13,3 +13,6 @@ sqlite3 db/measuredincm.db
 
 ALTER TABLE track_history ADD COLUMN playtime datetime;
 UPDATE track_history SET playtime = datetime(time_utc, 'unixepoch', 'localtime');
+
+# Mocha
+Use mocha test/*.coffee --compilers coffee:coffee-script/register

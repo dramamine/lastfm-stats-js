@@ -20,12 +20,12 @@ module.exports = (grunt) ->
     #     configFile: 'config/coffeelint.json'
     #   src: ['*.coffee','src/**/*.coffee','test/**/*.coffee','generator/**/*.coffee']
 
-    # mochaTest:
-    #   src: ['test/**/*.coffee']
-    #   options:
-    #     reporter: 'nyan'
-    #     clearRequireCache: true
-    #     require: 'coffee-script'
+    mochaTest:
+      src: ['test/**/*.coffee']
+      options:
+        reporter: 'nyan'
+        clearRequireCache: true
+        require: 'coffee-script'
 
     # coffee:
     #   options:
@@ -115,6 +115,7 @@ module.exports = (grunt) ->
 
   #tasks
   grunt.registerTask 'default', [
+    'mochaTest'
     'express'
     'watch'
     ]

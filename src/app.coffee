@@ -47,10 +47,21 @@ app.get '/top_artists/:year', (req, res) ->
   # use this for testing
   # stats.get_sample_data (data) ->
   #   res.json data
+  res.header "Access-Control-Allow-Origin", "*"
+  res.header "Access-Control-Allow-Headers", "X-Requested-With"
   
   stats.get_top_artists req.params.year, (data) ->
     res.json data
 
+
+app.get '/artist/:artist_name', (req, res) ->
+  
+  # TODO just apply this header to ALL
+  res.header "Access-Control-Allow-Origin", "*"
+  res.header "Access-Control-Allow-Headers", "X-Requested-With"
+  
+  stats.get_artist_data req.params.artist_name, (data) ->
+    res.json data
 
 
 

@@ -1,0 +1,6 @@
+<div>
+  <span ng-hide="editable" ng-click="editable=true;">{{row.artist}} - {{row.title}}</span>
+  <button ng-hide="editable" ng-click="removeRowAt($index)">Remove This Row</button>
+  <span ng-show="editable"><input ng-model="row.artist"> <input ng-model="row.title"></span>
+  <button ng-show="editable" ng-click="editable=false;">Save</button>
+</div>

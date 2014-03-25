@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <!--Body content-->
+
+      <h2>{{data.artist_name}}</h2>
+      <h3>Total Plays: {{data.total_plays}}</h3>
+      <h3>Total Hours: {{data.total_hours}}</h3>
+      <p>Converted Time: {{total_time | number}} {{total_time_unit.name}}</p>
+
+      <select ng-model="total_time_unit" ng-options="item.name for item in units">
+
+      <ul class="data">
+
+        <li ng-repeat="row in data.by_month | orderBy:month">
+          <p>{{row.month}} - {{row.plays}} tracks played.</p>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+

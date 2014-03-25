@@ -18,20 +18,23 @@ Ahh, the SEAN stack! There are probably much better ways to do this (see the doz
 ## THIS UI IS TERRIBLE.
 Don't worry about it. Right now this is just something I used to learn Angular and craft my own tutorial. I learned how to write factories, services, directives, and controllers, and learned how to use data binding, filters, and asynchronous calls to a RESTful API.
 
-# Run with grunt
+## WISH I COULD USE MY OWN DATA WITH THIS
+Good luck.
+
+### Run with grunt
 First, do 'npm install' to get started. Then run 'grunt' and you're good to go.
 
-# Then go to
+### Then go to
 localhost:3000
 
 ## Database Shizz
-# Run this to play around
+### Run this to play around
 sqlite3 db/measuredincm.db
 
-# something I did
+### something I did
 ALTER TABLE track_history ADD COLUMN playtime datetime;
 UPDATE track_history SET playtime = datetime(time_utc, 'unixepoch', 'localtime');
 
-# Mocha
+### Mocha
 Use mocha test/*.coffee --compilers coffee:coffee-script/register
 
